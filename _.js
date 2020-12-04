@@ -37,6 +37,11 @@ const _ = {
 
         return paddedString;
         
+    },
+
+    has(object, key) {
+        const hasValue = object[key] != undefined ? true : false;
+        return hasValue;
     }
 
 };
