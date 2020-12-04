@@ -20,6 +20,10 @@ const _ = {
         
         const isInRange = start <= number && number < end ? true : false;
         return isInRange; 
+    },
+
+    words(string) {
+        return string.split(" ");
     }
 
 };
