@@ -70,7 +70,15 @@ const _ = {
             n = 1;
         }
 
-        const droppedArray = array.slice(-array.length, n);
+        const droppedArray = array.slice(n, array.length);
+        return droppedArray;
+    },
+
+    dropWhile(array, predicate) {
+        const dropNumber = array.findIndex(function(element, index) {
+            return !predicate(element, index, array);
+        });
+        const droppedArray = this.drop(array, dropNumber);
         return droppedArray;
     }
 
